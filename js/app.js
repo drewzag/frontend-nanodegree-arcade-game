@@ -65,7 +65,7 @@ const Character = function (x, y, sprite) {
   this.sprite = sprite
 }
 
-var Enemy = function (x, y, sprite, speed, player) {
+const Enemy = function (x, y, sprite, speed, player) {
   Character.call(this, x, y, sprite)
   this.speed = speed
   this.player = player
@@ -96,7 +96,7 @@ Enemy.prototype.collisions = function () {
   }
 }
 
-var Player = function (x, y, sprite) {
+const Player = function (x, y, sprite) {
   Character.call(this, x, y, sprite)
 }
 
@@ -152,7 +152,7 @@ for (let i = 0; i < 3; i++) {
 }
 
 document.addEventListener('keyup', function (e) {
-  var allowedKeys = {
+  const allowedKeys = {
     37: 'left',
     38: 'up',
     39: 'right',
